@@ -68,14 +68,15 @@ module.exports = {
 			},
 		},
 	],
+	watchOptions: {
+		ignored: /node_modules|\.tmp$|\.swp$|\.DS_Store/, // Ignore irrelevant files
+		aggregateTimeout: 500, // Increase delay before rebuilding (500ms)
+		poll: false, // Disable polling entirely (or set a higher interval if needed)
+	},
 	stats: {
 		all: false, // Turn off all output
 		errors: true, // Show errors
 		warnings: true, // Show warnings
-		builtAt: false, // Show build timestamp
-		assets: false, // Show generated assets
-		cachedAssets: false, // Suppress `[cached]` assets
-		modules: false, // Hide module details
 		timings: true, // Show timing for each build
 	},
 };
