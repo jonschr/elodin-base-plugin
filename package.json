@@ -1,0 +1,20 @@
+{
+	"name": "elodin-base-plugin",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"css-loader": "^7.1.2",
+		"glob": "^11.0.0",
+		"mini-css-extract-plugin": "^2.9.2",
+		"sass": "^1.81.0",
+		"sass-loader": "^16.0.3",
+		"webpack": "^5.96.1",
+		"webpack-cli": "^5.1.4"
+	}
+}
