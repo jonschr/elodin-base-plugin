@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Sorry, you are not allowed to access this page directly.' );
 }
 
-// Plugin directory.
+// Plugin base values.
 define( 'PLUGINBASENAME', __DIR__ );
 define( 'PLUGINBASENAME_VERSION', '0.1' );
 
@@ -49,3 +49,14 @@ function plugintextdomain_require_files_recursive( $directory ) {
 
 // Require_once all files in /lib and its subdirectories.
 plugintextdomain_require_files_recursive( PLUGINBASENAME_DIR . 'lib' );
+
+// Load Plugin Update Checker.
+require PLUGINBASENAME_DIR . 'vendor/plugin-update-checker/plugin-update-checker.php';
+$update_checker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/AUTHORREPO/plugintextdomain/',
+	__FILE__,
+	'plugintextdomain'
+);
+
+// Optional: Set the branch that contains the stable release.
+$update_checker->setBranch( 'main' );
