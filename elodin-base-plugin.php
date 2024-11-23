@@ -19,7 +19,7 @@
 // Change the assets/css/pluginslug-syles.scss and dist/js/pluginslug-scripts.js to your own plugin slug
 // Find/replace pluginslug to your plugin's slug (all lowercase)
 // Run npm install to install the necessary dependencies
-// Run npm run watch to compile the assets
+// Run npx webpack --watch to compile the assets
 // Uncomment the PUC include below and find/replace AUTHORREPO (if using GitHub with a public repo)
 
 
