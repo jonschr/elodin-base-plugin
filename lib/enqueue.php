@@ -2,7 +2,7 @@
 /**
  * Enqueue scripts and stylesheets
  *
- * @package plugintextdomain
+ * @package pluginslug
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @return void.
  */
-function plugintextdomain_enqueue_scripts_stylesheets() {
+function pluginslug_enqueue_scripts_stylesheets() {
 
 	// Plugin styles.
 	wp_enqueue_style( 
@@ -34,11 +34,11 @@ function plugintextdomain_enqueue_scripts_stylesheets() {
 		true 
 	);
 }
-add_action( 'wp_enqueue_scripts', 'plugintextdomain_enqueue_scripts_stylesheets' );
+add_action( 'wp_enqueue_scripts', 'pluginslug_enqueue_scripts_stylesheets' );
 
 /**
  * Admin enqueues
  */
-function plugintextdomain_enqueue_scripts_stylesheets_admin() {
+function pluginslug_enqueue_scripts_stylesheets_admin() {
 }
-add_action( 'admin_enqueue_scripts', 'plugintextdomain_enqueue_scripts_stylesheets_admin' );
+add_action( 'admin_enqueue_scripts', 'pluginslug_enqueue_scripts_stylesheets_admin' );

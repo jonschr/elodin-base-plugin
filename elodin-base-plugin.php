@@ -6,12 +6,22 @@
 	Version:        0.1
 	Author:         Jon Schroeder
 	Author URI:     https://elod.in
-	Text Domain:    plugintextdomain
+	Text Domain:    pluginslug-textdomain
 	License:        GPLv2 or later
 	License URI:    http://www.gnu.org/licenses/gpl-2.0.html
  *
-	@package plugintextdomain
+	@package pluginslug
  */
+
+//! PLUGIN STARTER CHECKLIST
+// Find/replace PLUGINNAME to the name (Mixed Case) of your plugin
+// Find/replace PLUGINBASENAME to be the unique identifier for your plugin (ALL CAPS)
+// Find/replace pluginslug to your plugin's textdomain/slug (all lowercase)
+// Change the assets/css/plugin-syles.scss and dist/js/plugin-scripts.js to your own plugin name
+// Run npm install to install the necessary dependencies
+// Run npx webpack --watch to compile the assets
+// Uncomment the PUC include below and find/replace AUTHORREPO (if using GitHub)
+
 
 // Prevent direct access to the plugin.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -34,7 +44,7 @@ define( 'PLUGINBASENAME_FILE', __FILE__ );
  * @param   string $directory  the path to the directory to load.
  * @return  void
  */
-function plugintextdomain_require_files_recursive( $directory ) {
+function pluginslug_require_files_recursive( $directory ) {
 	$iterator = new RecursiveIteratorIterator(
 		new RecursiveDirectoryIterator( $directory, RecursiveDirectoryIterator::SKIP_DOTS ),
 		RecursiveIteratorIterator::LEAVES_ONLY
@@ -48,15 +58,15 @@ function plugintextdomain_require_files_recursive( $directory ) {
 }
 
 // Require_once all files in /lib and its subdirectories.
-plugintextdomain_require_files_recursive( PLUGINBASENAME_DIR . 'lib' );
+pluginslug_require_files_recursive( PLUGINBASENAME_DIR . 'lib' );
 
-// Load Plugin Update Checker.
-require PLUGINBASENAME_DIR . 'vendor/plugin-update-checker/plugin-update-checker.php';
-$update_checker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/AUTHORREPO/plugintextdomain/',
-	__FILE__,
-	'plugintextdomain'
-);
+// // Load Plugin Update Checker.
+// require PLUGINBASENAME_DIR . 'vendor/plugin-update-checker/plugin-update-checker.php';
+// $update_checker = Puc_v4_Factory::buildUpdateChecker(
+// 	'https://github.com/AUTHORREPO/pluginslug/',
+// 	__FILE__,
+// 	'pluginslug'
+// );
 
-// Optional: Set the branch that contains the stable release.
-$update_checker->setBranch( 'main' );
+// // Optional: Set the branch that contains the stable release.
+// $update_checker->setBranch( 'main' );
