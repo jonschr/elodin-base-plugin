@@ -19,18 +19,18 @@ function pluginslug_enqueue_scripts_stylesheets() {
 	// Plugin styles.
 	wp_enqueue_style( 
 		'pluginslug-styles', 
-		PLUGINBASENAME_PATH . 'dist/css/pluginslug-styles.css', 
+		STARTERPLUGINBASENAME_PATH . 'dist/css/pluginslug-styles.css', 
 		array(), 
-		PLUGINBASENAME_VERSION, 
+		STARTERPLUGINBASENAME_VERSION, 
 		'screen'
 	);
 	
 	// Plugin scripts.
 	wp_enqueue_script( 
 		'pluginslug-scripts', 
-		PLUGINBASENAME_PATH . 'dist/js/pluginslug-scripts.js', 
+		STARTERPLUGINBASENAME_PATH . 'dist/js/pluginslug-scripts.js', 
 		array( 'jquery' ), 
-		PLUGINBASENAME_VERSION, 
+		STARTERPLUGINBASENAME_VERSION, 
 		true 
 	);
 }
