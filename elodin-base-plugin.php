@@ -17,7 +17,7 @@
 // Find/replace PLUGINNAME to the name (Mixed Case) of your plugin
 // Find/replace PLUGINBASENAME to be the unique identifier for your plugin (ALL CAPS)
 // Find/replace pluginslug to your plugin's textdomain/slug (all lowercase)
-// Change the assets/css/plugin-syles.scss and dist/js/plugin-scripts.js to your own plugin name
+// Change the assets/css/pluginslug-syles.scss and dist/js/pluginslug-scripts.js to your own plugin name
 // Run npm install to install the necessary dependencies
 // Run npx webpack --watch to compile the assets
 // Uncomment the PUC include below and find/replace AUTHORREPO (if using GitHub with a public repo)

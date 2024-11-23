@@ -18,8 +18,8 @@ function pluginslug_enqueue_scripts_stylesheets() {
 
 	// Plugin styles.
 	wp_enqueue_style( 
-		'plugin-styles', 
-		PLUGINBASENAME_PATH . 'dist/css/plugin-styles.css', 
+		'pluginslug-styles', 
+		PLUGINBASENAME_PATH . 'dist/css/pluginslug-styles.css', 
 		array(), 
 		PLUGINBASENAME_VERSION, 
 		'screen'
@@ -27,8 +27,8 @@ function pluginslug_enqueue_scripts_stylesheets() {
 	
 	// Plugin scripts.
 	wp_enqueue_script( 
-		'plugin-scripts', 
-		PLUGINBASENAME_PATH . 'dist/js/plugin-scripts.js', 
+		'pluginslug-scripts', 
+		PLUGINBASENAME_PATH . 'dist/js/pluginslug-scripts.js', 
 		array( 'jquery' ), 
 		PLUGINBASENAME_VERSION, 
 		true 

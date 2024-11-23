@@ -19,18 +19,18 @@ const getSassImports = (directory) =>
 const globalImports = getSassImports('./assets/css/global');
 const stylesImports = getSassImports('./assets/css/styles');
 
-// Write the combined SCSS imports to `plugin-styles.scss` before every compile
+// Write the combined SCSS imports to `pluginslug-styles.scss` before every compile
 fs.writeFileSync(
-	'./assets/css/plugin-styles.scss',
+	'./assets/css/pluginslug-styles.scss',
 	`${globalImports}\n${stylesImports}`
 );
 
 module.exports = {
 	mode: 'development', // Use 'production' for minified output
-	entry: './assets/css/plugin-styles.scss', // SCSS entry point
+	entry: './assets/css/pluginslug-styles.scss', // SCSS entry point
 	output: {
 		path: path.resolve(__dirname, 'dist/css'),
-		filename: 'plugin-styles.js', // Dummy JS file for webpack (CSS will be extracted)
+		filename: 'pluginslug-styles.js', // Dummy JS file for webpack (CSS will be extracted)
 	},
 	module: {
 		rules: [
@@ -55,13 +55,13 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: 'plugin-styles.css', // Output CSS file
+			filename: 'pluginslug-styles.css', // Output CSS file
 		}),
 		{
 			apply: (compiler) => {
 				compiler.hooks.beforeCompile.tap('InjectSassImports', () => {
 					fs.writeFileSync(
-						'./assets/css/plugin-styles.scss',
+						'./assets/css/pluginslug-styles.scss',
 						`${globalImports}\n${stylesImports}` // Rebuild imports dynamically on each compile
 					);
 				});
