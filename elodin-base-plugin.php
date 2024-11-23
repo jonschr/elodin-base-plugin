@@ -20,7 +20,7 @@
 // Change the assets/css/plugin-syles.scss and dist/js/plugin-scripts.js to your own plugin name
 // Run npm install to install the necessary dependencies
 // Run npx webpack --watch to compile the assets
-// Uncomment the PUC include below and find/replace AUTHORREPO (if using GitHub)
+// Uncomment the PUC include below and find/replace AUTHORREPO (if using GitHub with a public repo)
 
 
 // Prevent direct access to the plugin.
