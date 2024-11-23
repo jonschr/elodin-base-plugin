@@ -1,6 +1,6 @@
 <?php
 /**
-	Plugin Name:    PLUGINNAME
+	Plugin Name:    STARTERPLUGINNAME
 	Plugin URI:     https://elod.in
 	Description:    Just another WordPress plugin
 	Version:        0.1
@@ -13,13 +13,13 @@
 	@package pluginslug
  */
 
-//! PLUGIN STARTER CHECKLIST
-// Find/replace PLUGINNAME to the name (Mixed Case) of your plugin
-// Find/replace PLUGINBASENAME to be the unique identifier for your plugin (ALL CAPS)
-// Find/replace pluginslug to your plugin's textdomain/slug (all lowercase)
-// Change the assets/css/pluginslug-syles.scss and dist/js/pluginslug-scripts.js to your own plugin name
+//! PLUGIN STARTER CHECKLIST (in order)
+// Find/replace STARTERPLUGINNAME to the name (Mixed Case) of your plugin
+// Find/replace STARTERPLUGINBASENAME to be the unique identifier for your plugin (ALL CAPS)
+// Change the assets/css/pluginslug-syles.scss and dist/js/pluginslug-scripts.js to your own plugin slug
+// Find/replace pluginslug to your plugin's slug (all lowercase)
 // Run npm install to install the necessary dependencies
-// Run npx webpack --watch to compile the assets
+// Run npm run watch to compile the assets
 // Uncomment the PUC include below and find/replace AUTHORREPO (if using GitHub with a public repo)
 
 
@@ -29,14 +29,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Plugin base values.
-define( 'PLUGINBASENAME', __DIR__ );
-define( 'PLUGINBASENAME_VERSION', '0.1' );
+define( 'STARTERPLUGINBASENAME', __DIR__ );
+define( 'STARTERPLUGINBASENAME_VERSION', '0.1' );
 
 // Set up plugin directories.
-define( 'PLUGINBASENAME_DIR', plugin_dir_path( __FILE__ ) );
-define( 'PLUGINBASENAME_PATH', plugin_dir_url( __FILE__ ) );
-define( 'PLUGINBASENAME_BASENAME', plugin_basename( __FILE__ ) );
-define( 'PLUGINBASENAME_FILE', __FILE__ );
+define( 'STARTERPLUGINBASENAME_DIR', plugin_dir_path( __FILE__ ) );
+define( 'STARTERPLUGINBASENAME_PATH', plugin_dir_url( __FILE__ ) );
+define( 'STARTERPLUGINBASENAME_BASENAME', plugin_basename( __FILE__ ) );
+define( 'STARTERPLUGINBASENAME_FILE', __FILE__ );
 
 /**
  * Load the files
@@ -58,10 +58,10 @@ function pluginslug_require_files_recursive( $directory ) {
 }
 
 // Require_once all files in /lib and its subdirectories.
-pluginslug_require_files_recursive( PLUGINBASENAME_DIR . 'lib' );
+pluginslug_require_files_recursive( STARTERPLUGINBASENAME_DIR . 'lib' );
 
 // // Load Plugin Update Checker.
-// require PLUGINBASENAME_DIR . 'vendor/plugin-update-checker/plugin-update-checker.php';
+// require STARTERPLUGINBASENAME_DIR . 'vendor/plugin-update-checker/plugin-update-checker.php';
 // $update_checker = Puc_v4_Factory::buildUpdateChecker(
 // 	'https://github.com/AUTHORREPO/pluginslug/',
 // 	__FILE__,
