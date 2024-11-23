@@ -69,4 +69,4 @@ pluginslug_require_files_recursive( PLUGINBASENAME_DIR . 'lib' );
 // );
 
 // // Optional: Set the branch that contains the stable release.
-// $update_checker->setBranch( 'main' );
+// $update_checker->setBranch( 'master' );
